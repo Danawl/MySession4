@@ -1,0 +1,143 @@
+/* 5 Used css properties
+ 1. margin
+ 2. width
+ 3. padding
+ 4. border
+ 5. height
+  New 25 css properties
+  1. animation - Used to create animations on HTML elements.
+  2. display - Defines how an element should be displayed
+  3. flex-direction -  Sets the direction of the flexible container's main axis.
+  4. overflow -  Controls how content that overflows an element is handled.
+  5. transition - Allows you to smoothly change property values over a specified duration.
+  6. opacity - Sets the transparency of an element, where a value of 0 is fully transparent, and 1 is fully opaque.
+  7. line-height - Defines the amount of space above and below the inline elements within a box.
+  8. transform - Applies various visual transformations to an element, such as rotation, scaling, skewing, and translation.
+  9. min-height - Sets the minimum height of an element
+  10. background-size - Determines how background images are sized and displayed within an element, allowing you to control scaling, covering, or tiling.
+  11. background-repeat - Specifies how a background image repeats
+  12. border-radius - Sets rounded corners for an element's border, creating a circular or elliptical shape.
+  13. list-style   - Controls the appearance of list items in a list
+  14. overscroll-behavior -  Controls how the browser behaves when a user tries to scroll beyond the boundaries of a scrollable element
+  15. text transform - Modifies the capitalization or transformation of text, allowing to make it uppercase, lowercase, or capitalize the first letter
+  16. aling-itmes - It control how items are aligned vertically within a container.
+  17. outline-color - Sets the color of the outline that appears around an element 
+  18. outline-style - Specifies the style of the outline
+  19. outline-width - Defines the width of the outline
+  20. gap - Specifies the spacing between rows and columns
+  21. aspect-ratio - Sets the aspect ratio of an element
+  22. grid-template-columns - This defines the size and number of columns in a grid layout.
+  23. backdrop-filter -  Applies filter effects to the area behind an element, creating a frosted or blurred effect
+  24. list-style-position - Determines whether list markers appear inside or outside the list item's content box
+  25. box-sizing - Controls how the total width and height of an element is calculated
+*/
+
+body {
+    background-color: #ffccff;
+    background-image: url('housebackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+}
+
+.title {
+    color: #ff3366;
+    font-size: 36px;
+    text-decoration: underline;
+    width: 100%;
+    text-shadow: 2px 2px 4px #9933cc;
+    
+}
+
+.header {
+    width: 100%;
+    background-color: #ff99cc;
+    padding: 5px;
+}
+
+.ingredient-list {
+    
+    list-style: circle;
+    list-style-position: outside;
+    padding-left: 140px;
+    display: grid;
+    gap: 3px;
+    margin: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    transition: background-color 0.5s ease;
+}
+
+.ingredient {
+    color: #00cc8f;
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 5px;
+    border: 2px solid #9933cc;
+    width: 60%;
+    height: 60px;
+    background: linear-gradient(45deg, #0099cc, #9933cc);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    outline-color: #ff0000;
+    outline-style: dashed;
+    outline-width: 3px;
+}
+
+.section-title {
+    color: #9933cc;
+    font-size: 24px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.instruction-list {
+    list-style: decimal;
+    padding-left: 240px;
+    margin: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.instruction {
+    color: rgb(207, 253, 99);
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 10px;
+    border: 2px dashed #ff6633;
+    width: 60%;
+    height: 50px;
+    background: linear-gradient(45deg, #33cc33, #ff6633);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+}
+
+.recipe-image {
+    padding-right: 210px;
+    image-rendering: smooth;
+    aspect-ratio: 3/2;
+    width: 5%;
+    animation: move 3s ease-in-out infinite alternate;
+    overscroll-behavior: contain;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(60%);
+    }
+}
